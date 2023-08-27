@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal Example</title>
-    <!-- Add any necessary CSS styles for centering the modal -->
     <style>
-        /* CSS for centering the modal */
+        
         #newton-modal {
             display: none;
             position: fixed;
@@ -42,12 +41,9 @@
     const closeModalButton = document.getElementById("close-modal");
     const modal = document.getElementById("newton-modal");
 
-    // Function to open the modal
     openModalButton.addEventListener("click", () => {
         modal.style.display = "block";
     });
-
-    // Function to close the modal
     closeModalButton.addEventListener("click", () => {
         modal.style.display = "none";
     });
