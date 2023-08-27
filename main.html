@@ -3,51 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal Example</title>
-    <style>
-        
-        #newton-modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        }
-    </style>
+    <title>Modal Example with Bootstrap</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
+<!-- Button to open the modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newton-modal">
+    Open Modal
+</button>
 
-<button id="open-modal">Launch newton modal</button>
-<div id="newton-modal">
-    <div class="modal-header">
-        <h2>New Modal</h2>
-    </div>
-    
-    
-    <div class="modal-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, leo a euismod placerat.</p>
-    </div>
-    
-    <div class="modal-footer">
-        <button id="close-modal">Close</button>
+<!-- The Modal -->
+<div class="modal fade" id="newton-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula, leo a euismod placerat.</p>
+            </div>
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 </div>
-<script>
-    const openModalButton = document.getElementById("open-modal");
-    const closeModalButton = document.getElementById("close-modal");
-    const modal = document.getElementById("newton-modal");
 
-    openModalButton.addEventListener("click", () => {
-        modal.style.display = "block";
-    });
-    closeModalButton.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-</script>
+<!-- Add Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
